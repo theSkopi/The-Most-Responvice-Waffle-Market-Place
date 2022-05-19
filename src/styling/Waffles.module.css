@@ -18,9 +18,10 @@ h2 {
 }
 
 .waffle__card {
-  width: 20rem;
+  width: 18%;
+  max-width: 18%;
   height: 10rem;
-  margin: 2rem;
+  margin: 1%;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -70,6 +71,34 @@ p.price {
   left: 70px;
 }
 
+@media (max-width: 1400px) {
+  .waffle__card {
+    width: 23%;
+    max-width: 23%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .waffle__card {
+    width: 31.3332%;
+    max-width: 31.3333%;
+  }
+}
+
+@media (max-width: 800px) {
+  .waffle__card {
+    width: 48%;
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 550px) {
+  .waffle__card {
+    width: 98%;
+    max-width: 98%;
+  }
+}
+
 @media (max-width: 430px) {
   .container {
     border: none;
@@ -79,5 +108,6 @@ p.price {
   .waffle__card {
     margin: 0.3rem 0.3rem 1rem 0.3rem;
     width: 95%;
+    max-width: 95%;
   }
 }
