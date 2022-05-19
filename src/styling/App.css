@@ -1,30 +1,28 @@
 :root {
-    --light-main-bg-color: rgb(231, 231, 231);
-    --light-main-color: rgb(8, 8, 8);
-    --light-header-bg-color: rgb(255, 198, 93);
-    --light-header-bg-color-hover: rgb(192, 138, 38);
-    --light-footer-bg-color: rgb(199, 199, 199);
+  --light-main-bg-color: rgb(231, 231, 231);
+  --light-main-color: rgb(8, 8, 8);
+  --light-header-bg-color: rgb(255, 198, 93);
+  --light-header-bg-color-hover: rgb(192, 138, 38);
+  --light-footer-bg-color: rgb(199, 199, 199);
 
-    --dark-main-bg-color: rgb(37, 35, 35);
-    --dark-main-color: rgb(238, 238, 238);
-    --dark-header-bg-color: rgb(192, 138, 38);
-    --dark-header-bg-color-hover: rgb(224, 146, 0);
-    --dark-footer-bg-color: rgb(58, 58, 58);
-
-  }
-
+  --dark-main-bg-color: rgb(37, 35, 35);
+  --dark-main-color: rgb(238, 238, 238);
+  --dark-header-bg-color: rgb(192, 138, 38);
+  --dark-header-bg-color-hover: rgb(224, 146, 0);
+  --dark-footer-bg-color: rgb(58, 58, 58);
+}
 
 * {
- margin: 0;
- padding: 0;
+  margin: 0;
+  padding: 0;
 }
-button{
+button {
   background-color: transparent;
   border: none;
 }
 html {
- line-height: 1.15;
- -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 header,
 section,
@@ -34,6 +32,6 @@ footer,
 article,
 figure,
 hgroup {
- display: block;
- width: 100%;
+  display: block;
+  width: 100%;
 }

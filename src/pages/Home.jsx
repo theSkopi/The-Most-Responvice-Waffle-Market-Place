@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Home = () => {
   return (
@@ -32,7 +32,7 @@ const Home = () => {
       <h1>ahoj</h1>
       <h1>ahoj</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
