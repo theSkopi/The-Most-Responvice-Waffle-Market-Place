@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "name": "Classic Strawberry",
+        "image": "id-0-image",
+        "ingredients": ["flour", "salt", "baking powder", "sugar", "eggs", "milk", "butter", "vanilla extract", "strawberry", "whip cream"],
+        "price": 6.99
+    },
+    {
+        "id": 1,
+        "name": "Ham and Cheese Cauliflower Waffle",
+        "image": "id-1-image",
+        "ingredients": ["flour", "black pepper", "olive oil", "onions", "eggs", "cheddar cheese", "ham", "cauliflower"],
+        "price": 11.99
+    },
+    {
+        "id": 2,
+        "name": "Ham and Cheese Cauliflower Waffle",
+        "image": "",
+        "ingredients": ["flour", "black pepper", "olive oil", "onions", "eggs", "cheddar cheese", "ham", "cauliflower"],
+        "price": 11.99
+    }
+]

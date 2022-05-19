@@ -1,0 +1,31 @@
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.content{
+    padding: 2rem;
+    flex-grow: 1;
+    transition: 0.5s;
+    
+}
+
+.light__mode{
+    background-color: var(--light-main-bg-color);
+    color: var(--light-main-color);
+  }
+
+.dark__mode{
+ background-color: var(--dark-main-bg-color);
+  color: var(--dark-main-color);
+}
+
+@media (max-width : 430px) {
+  .content{
+      padding: 0.5rem;
+  }
+
+}
