@@ -1,7 +1,11 @@
-.header {
+header {
   border-bottom: solid 2px rgb(94, 61, 0);
   width: 100%;
   transition: 0.5s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
 .logo__and__theme {
@@ -12,23 +16,20 @@
 
 .logo {
   margin: 0.5rem;
-  height: 7rem;
+  height: 5rem;
 }
 .logo__mini {
   margin: 0.5rem;
-  height: 5rem;
+  height: 4rem;
   display: none;
 }
 
 .menu__container {
   background-color: transparent;
-  border-top: solid 2px rgb(94, 61, 0);
-  border-right: solid 2px rgb(94, 61, 0);
-  width: fit-content;
-  border-top-right-radius: 10px;
   display: flex;
   overflow: hidden;
   list-style: none;
+  z-index: 1;
 }
 .menu__container .menu__icon {
   display: none;
@@ -37,16 +38,15 @@
 .menu__container a {
   background-color: transparent;
   text-decoration: none;
+  display: inline-block;
   font-size: 1.4rem;
+  padding: 0.5rem 1rem;
 }
 .menu__container li {
-  padding: 0 0.7rem 0 0.7rem;
   transition: 0.5s;
-  border-left: solid 2px rgb(94, 61, 0);
-}
-
-.menu__container .current__site {
-  text-decoration: underline;
+  margin: 0.7rem;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .selected {
@@ -90,6 +90,7 @@
 
 .dark__mode a {
   color: var(--dark-main-color);
+  text-shadow: 0 0 2px black;
 }
 .dark__mode a .menu__icon {
   color: var(--dark-main-color);
@@ -100,7 +101,14 @@
   background-color: var(--header-bg-color-hover);
 }
 
-@media (max-width: 659px) {
+@media (min-width: 27em) {
+  .menu__container .current__site {
+    background-color: var(--header-bg-color-hover);
+    box-shadow: 0 1px 4px black;
+  }
+}
+
+@media (max-width: 62.5em) {
   .logo {
     display: none;
   }
@@ -109,7 +117,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 27em) {
   .menu__container {
     position: fixed;
     bottom: 0px;
@@ -153,5 +161,24 @@
   .menu__container li:active {
     background-color: transparent;
     transition: 0.5s;
+  }
+}
+
+@media (max-width: 45em) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .theme__switch {
+    margin: 0;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+  .menu__container a {
+    padding: 0.2rem 0.6rem;
+  }
+  .menu__container li {
+    margin: 0.3rem;
   }
 }
