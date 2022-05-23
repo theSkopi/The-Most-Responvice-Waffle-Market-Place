@@ -37,15 +37,12 @@ hgroup {
 }
 
 ::-webkit-scrollbar {
-  width: 0.8em;
+  width: 0.6em;
 }
 ::-webkit-scrollbar-track {
-  background: var(--dark-header-bg-color);
-  position: absolute;
 }
 ::-webkit-scrollbar-thumb {
   background: rgb(82, 82, 82);
-  border: 0.15em solid var(--dark-header-bg-color);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(54, 54, 54);
