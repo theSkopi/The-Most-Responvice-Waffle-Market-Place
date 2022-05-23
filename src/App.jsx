@@ -13,10 +13,11 @@ import FindUs from "./pages/FindUs";
 import PageNotFound from "./pages/PageNotFound";
 import Admin from "./pages/Admin";
 import Waffles from "./pages/Waffles";
+import themeSetter from "./components/themeMode";
 
 const LayoutedSites = () => {
-  const [themeState, setThemeState] = useState("dark");
-  const [themeMode, setThemeMode] = useState("dark");
+  const [themeState, setThemeState] = useState(themeSetter("auto"));
+  const [themeMode, setThemeMode] = useState("auto");
   return (
     <Layout
       themeState={themeState}

@@ -18,17 +18,16 @@ function Header({
   setThemeMode,
 }) {
   let theme =
-    themeMode === "light" ? Styles.light__mode : Styles.dark__mode;
+    themeState === "light" ? Styles.light__mode : Styles.dark__mode;
   const pathName = useLocation().pathname;
 
   const handleThemeSwitch = (theme) => {
-    setThemeState(theme);
-    themeSetter(theme, setThemeMode);
+    setThemeState(themeSetter(theme));
+    setThemeMode(theme);
   };
 
   return (
     <header className={theme}>
-      {/* <div className={Styles.logo__and__theme}> */}
       <Link to={"/"}>
         <img
           className={Styles.logo}
@@ -41,7 +40,6 @@ function Header({
           alt="waffle shuffle logo"
         />
       </Link>
-      {/* </div> */}
       <ul className={Styles.menu__container}>
         <li className={pathName === "/" ? Styles.current__site : ""}>
           {" "}
@@ -83,19 +81,19 @@ function Header({
       </ul>
       <ul className={Styles.theme__switch}>
         <button
-          className={themeState === "light" ? Styles.selected : ""}
+          className={themeMode === "light" ? Styles.selected : ""}
           onClick={() => handleThemeSwitch("light")}
         >
           <BsSun />
         </button>
         <button
-          className={themeState === "dark" ? Styles.selected : ""}
+          className={themeMode === "dark" ? Styles.selected : ""}
           onClick={() => handleThemeSwitch("dark")}
         >
           <MdDarkMode />
         </button>
         <button
-          className={themeState === "auto" ? Styles.selected : ""}
+          className={themeMode === "auto" ? Styles.selected : ""}
           onClick={() => handleThemeSwitch("auto")}
         >
           <BsClockHistory />

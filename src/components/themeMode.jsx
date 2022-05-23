@@ -1,13 +1,12 @@
+const themeSetter = (themeState) => {
+  const date = new Date();
+  const nightTime = date.getHours() >= 20 || date.getHours() <= 8;
 
-const themeSetter = (themeState, setTheme) => {
-    // const date = new Date();
-    // const nightTime = date.getHours() >= 20 || date.getHours() <= 8;
+  return themeState !== "auto"
+    ? themeState
+    : nightTime
+    ? "dark"
+    : "light";
+};
 
-    themeState !== 'auto' ? setTheme(themeState)
-    :setTheme('dark');
-
-      
-  return null
-}
-
-export default themeSetter
+export default themeSetter;
