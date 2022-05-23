@@ -1,5 +1,5 @@
 import Styles from "../styling/Layout.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./AppHeader";
 import Footer from "./AppFooter";
 
@@ -12,6 +12,14 @@ function Layout({
 }) {
   let theme =
     themeState === "light" ? Styles.light__mode : Styles.dark__mode;
+
+  useEffect(() => {
+    if (themeState === "light")
+      document.body.style.backgroundColor = "rgb(231, 231, 231)";
+    return () => {
+      document.body.style.backgroundColor = "rgb(37, 35, 35)";
+    };
+  }, [themeState]);
   return (
     <div className={Styles.layout}>
       <Header
