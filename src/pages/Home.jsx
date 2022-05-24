@@ -1,37 +1,15 @@
 import React from "react";
+import HomeArticleCard from "../components/HomeArticleCard";
+import data from "../data/home-articles.json";
+import Styles from "../styling/Home.module.css";
 
 const Home = () => {
   return (
-    <div>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-      <h1>ahoj</h1>
-    </div>
+    <section className={Styles.article__container}>
+      {data.map((article) => (
+        <HomeArticleCard key={article.id} article={article} />
+      ))}
+    </section>
   );
 };
 
